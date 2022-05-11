@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <!--Color template from https://colorhunt.co/palette/0000003e065f700b978e05c2-->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lethal Aim</title>
+        <link rel="icon" type="image/png" href="crosshair.png"/>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="grid"></div>
+        <canvas id="mapCanvas"></canvas>
+        <canvas id="playerCanvas"></canvas>
+        <!--Shows the weapons that user has-->
+        <div id="inventory"></div>
+        <i class="fa fa-crosshairs" id="aim"></i>
+        <!--Allows users to select the level they want to play-->
+        <div id="levelSelection">
+            <div class="lvl" id="lvl1" onclick="selectLvl(this.id);">1</div>
+            <div class="lvl" id="lvl2" onclick="selectLvl(this.id);">2</div>
+            <div class="lvl" id="lvl3" onclick="selectLvl(this.id);">3</div>
+            <div class="lvl" id="lvl4" onclick="selectLvl(this.id);">4</div>
+            <div class="lvl" id="lvl5" onclick="selectLvl(this.id);">5</div>
+            <div class="lvl" id="lvl6" onclick="selectLvl(this.id);">6</div>
+            <div class="lvl" id="lvl7" onclick="selectLvl(this.id);">7</div>
+            <div class="lvl" id="lvl8" onclick="selectLvl(this.id);">8</div>
+            <div class="lvl" id="lvl9" onclick="selectLvl(this.id);">9</div>
+            <div class="lvl" id="lvl10" onclick="selectLvl(this.id);">10</div>
+        </div>
+        <div id="intro">
+            <button class="introButton" onclick="openSettings();"><strong>Settings</strong></button>
+            <button class="introButton" onclick="tutorial();"><strong>Tutorial</strong></button>
+            <button class="introButton" onclick="showWeapons();"><strong>Weapons</strong></button>
+            <button class="introButton" onclick="playGame();"><strong>Play</strong></button>
+        </div>
+        <div id="allWeapons">
+            <!--State the type too: weapon, accessory, etc-->
+            <div class="weapons" id="weapon1">Fists</div>
+            <div class="weapons" id="weapon2">Knife</div>
+            <div class="weapons" id="weapon3">Pistol</div>
+            <div class="weapons" id="weapon4">Machine Gun</div>
+            <div class="weapons" id="weapon5">Shotgun</div>
+            <div class="weapons" id="weapon6">Sniper Rifle</div>
+            <div class="weapons" id="weapon7">Rocket Launcher</div>
+            <div class="weapons" id="weapon8">Portal Gun</div>
+            <div class="weapons" id="weapon9">Laser Gun</div>
+            <div class="weapons" id="weapon10">Gernade</div>
+            <div class="weapons" id="weapon11">Bandage</div>
+            <div class="weapons" id="weapon12">Medkit</div>
+            <button class="introButton" onclick="back();"><strong>Back</strong></button>
+        </div>
+        <div id="settings">
+            <!--Shows controls, Turn off music-->
+            <button class="introButton" onclick="back();"><strong>Back</strong></button>
+        </div>
+    </body>
+    <script src="game.js"></script>
+</html>
